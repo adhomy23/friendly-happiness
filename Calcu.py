@@ -4,6 +4,13 @@ def add(x, y):
 def subtract(x, y):
     return x - y
 
+def multiply(x, y):
+    return x * y
+
+def divide(x, y):
+    if y == 0:
+        raise ValueError("Cannot divide by zero.")
+    return x / y
 
 print("Simple Calculator")
 print("1. Add")
@@ -21,10 +28,10 @@ if choice == '1':
 elif choice == '2':
     print(f"Result: {num1} - {num2} = {subtract(num1, num2)}")
 elif choice == '3':
-    print(f"Result: {num1} * {num2} = {num1 * num2}")
+    print(f"Result: {num1} * {num2} = {multiply(num1, num2)}")
 elif choice == '4':
     if num2 != 0:
-        print(f"Result: {num1} / {num2} = {num1 / num2}")
+        print(f"Result: {num1} / {num2} = {divide(num1, num2)}")
     else:
         print("Error: Division by zero is not allowed.")
 
